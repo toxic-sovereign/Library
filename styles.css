@@ -48,7 +48,7 @@ li {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 48px;
     color: blueviolet;
     margin-bottom: 24px;
     text-align: center;
@@ -257,6 +257,7 @@ header {
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight {
@@ -264,7 +265,6 @@ header {
     width: calc(100% / 3);
     display: flex;
     align-items: center;
-    text-align: center;
     flex-direction: column;
 }
 
@@ -289,6 +289,7 @@ header {
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /* Features */
@@ -380,12 +381,46 @@ footer {
     padding: 0 8px;
 }
 
+/* Media Queries */
+/* Small Phones, Tablets, Large Phones */
+
+@media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+            width: 50%;
+    }
+}
+
 @media (max-width: 550px) {
+    .btn__menu {
+        display: block;
+    }
+    
     .nav__links {
         display: none;
     }
 
-    .btn__menu {
-        display: block;
+    .highlight {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
     }
 }
